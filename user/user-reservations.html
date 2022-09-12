@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
+    <!-- Datatables -->
+    <link rel="stylesheet" type="text/css" href="../admin/datatables/datatables.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../admin/datatables/DataTables-1.12.1/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="../assets/css/menu.css">
-    <title>Perfil</title>
+    <title>Reservaciones</title>
 </head>
 
 <body>
@@ -41,7 +44,7 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="profile.html" class="nav-link active" aria-current="page">
+                    <a href="profile.html" class="nav-link text-white" aria-current="page">
                         <svg class="bi pe-none me-2" width="16" height="16">
                             <use xlink:href="#home"></use>
                         </svg>
@@ -49,7 +52,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="user-reservations.html" class="nav-link text-white">
+                    <a href="user-reservations.html" class="nav-link active">
                         <svg class="bi pe-none me-2" width="16" height="16">
                             <use xlink:href="#table"></use>
                         </svg>
@@ -66,7 +69,7 @@
                     <strong>Nombre Apellido</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                    <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                    <li><a class="dropdown-item" href="profile.html">Editar Perfil</a></li>
                     <li><a class="dropdown-item" href="#">Crear Reservación</a></li>
 
                     <li>
@@ -79,57 +82,60 @@
 
 
         <div class="container  shadow-lg p-3 mb-5 bg-body rounded">
-            <div>
-                <h2 class="profile-title color-red mb-4">Perfil de Usuario</h2>
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <h2 class="profile-title color-red mb-4">Reservaciones</h2>
+                </div>
+                <div class="col-lg-3 col-md-4 d-flex">
+                    <button class="btn btn-primary-red w-75 align-self-center">Crear Reservación</button>
+                </div>
             </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group mb-4">
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="exampleInputName" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="exampleInputName" placeholder="Tiger">
-                            </div>
-                            <div class="col-6">
-                                <label for="exampleInputLastName" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="exampleInputLastName" placeholder="Nixon">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group mb-4">
-                        <div class="row">
-                            <div class="col-6">
-                                <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="tigernixon@mail.com">
+            <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="card-body">
+                    <table id="usuarios" class="table table-bordered display">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Mesa</th>
+                                <th>Pedido</th>
+                                <th>Estado</th>
+                                <th>Fecha Reservación</th>
+                                <th>Hora</th>
+                                <th>Fecha Solicitud</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>000001</td>
+                                <td>5</td>
+                                <td>Si</td>
+                                <td><span class="badge rounded-pill text-bg-primary">Completada</span></td>
+                                <td>30/08/2022</td>
+                                <td>20:30</td>
+                                <td>10/09/2000</td>
+                            </tr>
+                            <tr>
+                                <td>000003</td>
+                                <td>3</td>
+                                <td>Si</td>
+                                <td><span class="badge rounded-pill text-bg-success">Activo</span></td>
+                                <td>31/08/2022</td>
+                                <td>21:30</td>
+                                <td>11/09/2020</td>
+                            </tr>
+                            <tr>
+                                <td>000019</td>
+                                <td>7</td>
+                                <td>No</td>
+                                <td><span class="badge rounded-pill text-bg-danger">Cancelada</span></td>
+                                <td>30/07/2022</td>
+                                <td>10:30</td>
+                                <td>10/09/2020</td>
+                            </tr>
+                        </tbody>
 
-                            </div>
-                            <div class="col-6">
-                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                    placeholder="*************">
-                            </div>
-                        </div>
-                    </div>
-                    <fieldset disabled="disabled" class="mb-4">
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label for="exampleInputFirstDate" class="form-label">Fecha de Registro</label>
-                                    <input type="text" class="form-control" id="exampleInputFirstDate"
-                                        placeholder="10/08/2022">
-                                </div>
-                                <div class="col-6">
-                                    <label for="exampleInputLastName" class="form-label">Fecha de Último Acceso</label>
-                                    <input type="text" class="form-control" id="exampleInputLastName"
-                                        placeholder="31/08/2022">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <button type="submit" class="btn btn-primary-red">Editar</button>
-                </form>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -167,6 +173,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
 </body>
 
 </html>

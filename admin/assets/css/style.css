@@ -58,7 +58,8 @@ a:hover {
 }
 
 #sidebar-container .menu {
-    width: 18rem;
+    width: 11rem;
+    /* width: 18rem; */
 }
 
 #content {
