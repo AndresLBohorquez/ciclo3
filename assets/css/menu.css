@@ -1,8 +1,28 @@
-.img-bg{
-    background-color: rgba(176, 189, 65, 0.527);
-}
-
-.img-sz{
+.img-sz {
     width: 60%;
     height: 350px;
+}
+
+
+.card-height {
+    height: 450px;
+}
+
+.card-text-sz {
+    height: 120px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: #b55454;
+}
+
+.color-red {
+    color: #b55454;
+    text-decoration: none;
+}
+
+.h-sidebar{
+    min-height: 70vh
 }

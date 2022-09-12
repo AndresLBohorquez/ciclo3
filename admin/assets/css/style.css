@@ -1,5 +1,5 @@
 :root {
-    --primary: #111B54;
+    --primary: #2e5981;
     --light: #ffffff;
     --grey: #efefef;
 }
@@ -13,6 +13,11 @@ body {
 
 .decoration-none {
     text-decoration: none;
+}
+
+.decoration-none-red {
+    text-decoration: none;
+    color: #b55454;
 }
 
 a:hover {
@@ -83,4 +88,15 @@ a:hover {
     .stat {
         border: 0;
     }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: #b55454;
+}
+
+.color-red {
+    color: #b55454;
+    text-decoration: none;
 }

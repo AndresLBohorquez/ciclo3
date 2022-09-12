@@ -8,6 +8,11 @@ body{
     font-family: 'open sans', cursive !important;
 }
 
+.img-sz {
+    width: 60%;
+    height: 350px;
+}
+
 .contenedor {
     padding: 60px 0 !important;
     width: 90% !important;
